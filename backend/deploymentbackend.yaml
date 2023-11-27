@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  backend-app
+  name: backend-app
 spec:
   selector:
     matchLabels:
@@ -9,15 +9,12 @@ spec:
   template:
     metadata:
       labels:
-        app:  backend-app
+        app: backend-app
     spec:
       containers:
-      - image:  atharva262002/backend-image
+      - image: atharva262002/backend-image
         name:  backend-app
         ports:
         - name:  java
           protocol: TCP
           containerPort:  8080
-  replicas: 2
-  strategy: 
-    type: RollingUpdate

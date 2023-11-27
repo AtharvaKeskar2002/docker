@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name:  service-frontend
+  name: service-frontend
 spec:
   selector:
     app: frontend-app

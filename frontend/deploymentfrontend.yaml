@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name:  frontend-app
+  name: frontend-app
 spec:
   selector:
     matchLabels:
@@ -9,16 +9,14 @@ spec:
   template:
     metadata:
       labels:
-        app:  frontend-app
+        app: frontend-app
     spec:
       containers:
-      - image:  atharva262002/frontend-image
-        name:  frontend-app
+      - image: atharva262002/frontend-image
+        name: frontend-app
         ports:
-        - name:  http
+        - name: http
           protocol: TCP
-          containerPort:  80
-  replicas: 2
-  strategy: 
-    type: RollingUpdate
+          containerPort: 80
+  
 
